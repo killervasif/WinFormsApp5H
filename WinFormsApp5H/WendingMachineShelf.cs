@@ -12,38 +12,18 @@ namespace WinFormsApp5H
 {
     public partial class WendingMachineShelf : UserControl
     {
-        Product product;
-        public Action<double, bool> PaymentStuff { get; set; }
-        public WendingMachineShelf()
-        {
-            InitializeComponent();
-        }
+        public Product product { get; set; }
+        public Action<double, bool> PaymentStuff { get; set; }     
 
         public WendingMachineShelf(Product p)
         {
+            InitializeComponent();
             this.product = p;
             productName.Text = p.Name;
             productPrice.Text=p.Price.ToString();
             Quantitybtn.Text=p.Quantity.ToString();                
         }
 
-        private void Quantitybtn_Click(object sender, EventArgs e)
-        {
-            if (WendingMachine.Money < product.Price)
-            {
-                MessageBox.Show($"You're too poor for {product.Name}");
-                return;
-            }
-            if (product.Quantity <= 0)
-            {
-                MessageBox.Show($"{product.Name} is out stock");
-                return;
-            }
-
-            WendingMachine.Money-=product.Price;            
-            product.Quantity--;
-            
-
-        }
+        
     }
 }

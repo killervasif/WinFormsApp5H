@@ -30,7 +30,7 @@
         {
             this.productName = new System.Windows.Forms.Label();
             this.productPrice = new System.Windows.Forms.Label();
-            this.Quantitybtn = new System.Windows.Forms.Button();
+            this.Quantitybtn = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // productName
@@ -53,23 +53,23 @@
             // 
             // Quantitybtn
             // 
+            this.Quantitybtn.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.Quantitybtn.Location = new System.Drawing.Point(20, 93);
             this.Quantitybtn.Name = "Quantitybtn";
             this.Quantitybtn.Size = new System.Drawing.Size(75, 23);
             this.Quantitybtn.TabIndex = 2;
             this.Quantitybtn.Text = "Quantity";
-            this.Quantitybtn.UseVisualStyleBackColor = true;
-            this.Quantitybtn.Click += new System.EventHandler(this.Quantitybtn_Click);
             // 
             // WendingMachineShelf
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.Controls.Add(this.Quantitybtn);
             this.Controls.Add(this.productPrice);
             this.Controls.Add(this.productName);
             this.Name = "WendingMachineShelf";
-            this.Size = new System.Drawing.Size(117, 146);
+            this.Size = new System.Drawing.Size(115, 144);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -79,6 +79,6 @@
 
         private Label productName;
         private Label productPrice;
-        private Button Quantitybtn;
+        public Label Quantitybtn;
     }
 }
